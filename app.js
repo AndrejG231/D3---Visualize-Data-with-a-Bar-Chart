@@ -9,11 +9,11 @@ const getData = async () => {
 };
 
 const draw = (queryData) => {
-  const { data } = queryData;
+  const { data, name } = queryData;
 
   // Dimension constants
-  const width = window.innerWidth - 0.5;
-  const height = window.innerHeight - 0.5;
+  const width = window.innerWidth - 15;
+  const height = window.innerHeight - 15;
   const paddingX = width / 15;
   const paddingY = height / 10;
   //
@@ -82,10 +82,12 @@ const draw = (queryData) => {
   // Title
   svg
     .append("text")
-    .text("Title")
+    .text(name.split(",")[0])
     .attr("x", width / 2)
-    .attr("y", 20)
-    .attr("id", "title");
+    .attr("y", 30)
+    .attr("id", "title")
+    .attr("text-anchor", "middle");
+  // .attr("font-size", 30);
 
   // Draw tooltip
   const tooltip = document.createElement("div");

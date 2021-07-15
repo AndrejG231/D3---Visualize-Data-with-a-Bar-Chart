@@ -5,6 +5,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: cadetblue;
 }
 
 #contaienr {
@@ -26,6 +30,8 @@ body {
   height: 50px;
   background: lightblue;
   opacity: 0;
+  top: 0;
+  left: 0;
 }
 
 #val,
